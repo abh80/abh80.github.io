@@ -51,12 +51,17 @@
 .scroll-me.is-not-visible {
   opacity: 0;
 }
+.specifications {
+  z-index: 40;
+}
 .specifications i {
   font-size: 50px;
   margin: 7px;
 }
+
 .scrollable-content {
   padding-left: 100px;
+  padding-right: 50px;
 }
 .content-holder {
   min-height: 500px;
