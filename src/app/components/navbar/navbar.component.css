@@ -1,0 +1,36 @@
+.navb {
+  /* add a shadow to the bottom , the theme is dark */
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+  display: block;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  padding: 20px;
+}
+.header-txt-show-line {
+  width: 40px;
+  height: 4px;
+  background-color: #08f;
+  border-radius: 15px;
+  transition: 0.3s all;
+  animation: animate-show-line 0.6s ease-in-out;
+}
+.header-logo:hover + .header-txt-show-line {
+  width: 150px;
+}
+@keyframes animate-show-line {
+  0% {
+    width: 0px;
+  }
+
+  100% {
+    width: 40px;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

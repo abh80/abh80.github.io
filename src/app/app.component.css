@@ -1,0 +1,160 @@
+.main-body .partial-sidebar-left {
+  width: 100px;
+  height: 100%;
+  padding: auto;
+  left: 0;
+}
+.toggles-visibility {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.main-body .partial-sidebar-left .tbc {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 16px;
+  font-weight: 500;
+  color: gray;
+  margin: auto;
+  text-align: center;
+  margin-left: calc(50% - 12px);
+  margin-top: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.main-body .partial-sidebar-left .tbc:hover {
+  color: white;
+}
+.main-body .partial-sidebar-left .first-line-short {
+  width: 1px;
+  height: 20%;
+  background-color: grey;
+  margin: auto;
+}
+.main-body .partial-sidebar-left .second-line-long {
+  width: 1px;
+  height: 100%;
+  background-color: grey;
+  margin: auto;
+}
+.hero-banner {
+  position: relative;
+  width: 100%;
+  margin-top: 4rem;
+  height: 400px;
+}
+.scroll-me {
+  height: 200px;
+  width: 100%;
+  position: relative;
+  top: 30%;
+}
+.scroll-me.is-not-visible {
+  opacity: 0;
+}
+.specifications i {
+  font-size: 50px;
+  margin: 7px;
+}
+.scrollable-content {
+  padding-left: 100px;
+}
+.content-holder {
+  min-height: 500px;
+}
+.hero-banner span {
+  animation-name: text-clip, filltext;
+  animation-duration: 1s, 2.5s;
+  animation-delay: 0s, 0s;
+  transition: opacity 1s, background-position 0.5s;
+}
+.hero-banner.is-not-visible span {
+  opacity: 0;
+}
+@keyframes text-clip {
+  from {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+.anim-text-fill-2 {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 100% 200%;
+  background-position: 0 100%;
+  background-image: linear-gradient(
+    to bottom,
+    #f5f5f5 50%,
+    rgb(0, 255, 234) 50%
+  );
+}
+.anim-text-fill-3 {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 100% 200%;
+  background-position: 0 100%;
+  background-image: linear-gradient(to bottom, #f5f5f5 50%, #f7df1e 50%);
+}
+.anim-text-fill-4 {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 100% 200%;
+  background-position: 0 100%;
+  background-image: linear-gradient(to bottom, #f5f5f5 50%, #f29112 50%);
+}
+.anim-text-fill {
+  transition: background-position 0.5s;
+}
+.anim-text-fill:hover {
+  background-position: 0 200%;
+}
+
+.anim-text-fill-1 {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 100% 200%;
+  background-position: 0 100%;
+  background-image: linear-gradient(
+    to bottom,
+    #f5f5f5 50%,
+    rgb(187, 255, 0) 50%
+  );
+}
+.animated-arrow {
+  animation: up-and-down 1.5s infinite alternate;
+  margin: auto;
+  display: block;
+}
+.is-visible {
+  opacity: 1;
+}
+
+@keyframes up-and-down {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}
+@keyframes filltext {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
