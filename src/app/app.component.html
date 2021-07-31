@@ -2,7 +2,7 @@
 <div class="main-body container w-full flex gap-2 h-full">
   <div class="partial-sidebar-left py-4 absolute">
     <div class="first-line-short"></div>
-    <span class="tbc">Home</span>
+    <span class="tbc" id="tbc">Home</span>
     <div class="second-line-long"></div>
   </div>
   <div
@@ -25,7 +25,7 @@
     </div>
     <div class="scroll-me">
       <div
-        class="relative ml-auto mr-auto right-0 left-0 animated-arrow"
+        class="relative animated-arrow"
         style="height: 20px; width: 20px; bottom: 5.25rem"
       >
         <svg width="30px" height="20px">
@@ -46,39 +46,73 @@
         gap-2
         toggles-visibility
         content-holder
+        is-section
       "
     >
-      <div class="text-center text-3xl font-semibold mb-2 separator">
-        What I know?
-      </div>
+      <div class="text-center text-3xl font-bold mb-2 separator">About Me</div>
 
-      <i class="devicon-javascript-plain colored"></i>
-      <i class="devicon-typescript-plain colored"></i>
-      <i class="devicon-java-plain-wordmark"></i>
-      <i class="devicon-kotlin-plain colored"></i>
-      <i class="devicon-csharp-plain-wordmark colored"></i>
-      <i class="devicon-python-plain-wordmark colored"></i>
-      <i class="devicon-html5-plain-wordmark colored"></i>
-      <i class="devicon-css3-plain-wordmark colored"></i>
-      <div class="text-left mt-10 flex gap-2">
-        <span
-          class="text-left text-lg font-bold"
-          style="color: rgb(0, 255, 234)"
-          >About Me:</span
-        ><span class="text-left text-lg font-bold">
-          I am a Javascript, Java developer mainly and I am a big fan of
-          programming and I really love it!<br />I learnt about javascript in
-          May of 2020 and soon got interested in it and started to make some
-          projects and apps.<br />My favourite language is java and I love to
-          listen to song and my favourite song is Sleepless Nights by Ayokay.</span
-        >
+      <a href="https://javascript.com" target="_blank"
+        ><i class="devicon-javascript-plain colored"></i
+      ></a>
+      <a href="https://www.typescriptlang.org/" target="_blank"
+        ><i class="devicon-typescript-plain colored"></i
+      ></a>
+      <a href="https://www.java.com/en/" target="_blank"
+        ><i class="devicon-java-plain-wordmark"></i
+      ></a>
+      <a href="https://kotlinlang.org" target="_blank">
+        <i class="devicon-kotlin-plain colored"></i
+      ></a>
+      <a href="https://dotnet.microsoft.com/languages/csharp" target="_blank"
+        ><i class="devicon-csharp-plain-wordmark colored"></i
+      ></a>
+      <a href="https://www.python.org/" target="_blank"
+        ><i class="devicon-python-plain-wordmark colored"></i
+      ></a>
+      <a href="https://html.com/" target="_blank"
+        ><i class="devicon-html5-plain-wordmark colored"></i
+      ></a>
+      <a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank"
+        ><i class="devicon-css3-plain-wordmark colored"></i
+      ></a>
+      <div class="spec-card container md:rounded bg-gray-700 p-6 mt-10">
+        <div class="text-center gap-2">
+          <span class="text-center text-lg font-bold">
+            I am a Javascript, Java developer mainly and I am a big fan of
+            programming and I really love it!
+            <div>
+              I learnt about javascript in May of 2020 and soon got interested
+              in it and started to make some projects and apps.
+            </div>
+            <div>
+              My favourite language is java and I love to listen to song and my
+              favourite song is Sleepless Nights by Ayokay.
+            </div></span
+          >
+        </div>
       </div>
     </div>
-    <div class="container w-full projects content-holder toggles-visibility">
-      <div class="text-center text-3xl font-semibold separator">
-        Some of my Projects
+    <div
+      class="
+        container
+        w-full
+        projects
+        content-holder
+        toggles-visibility
+        is-section
+      "
+    >
+      <div class="text-center text-3xl font-bold separator">Projects</div>
+      <div class="project-holder container w-full">
+        <div class="project-card">
+          <app-project-card
+            name="Audio Cloud"
+            description="A cloud based audio player"
+            cover="https://camo.githubusercontent.com/bbb63d735c91ec249afaecb709c7343d7e5beb6686097ba7dad22bdb576ebff2/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f6174746163686d656e74732f3830363536313734373439373338363035352f3836343439363334313134393534383536342f756e6b6e6f776e2e706e67"
+          ></app-project-card>
+        </div>
+        <div></div>
       </div>
-      <div></div>
     </div>
   </div>
 </div>

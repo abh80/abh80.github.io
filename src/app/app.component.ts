@@ -33,12 +33,13 @@ export class AppComponent implements OnInit {
           (
             document.getElementsByClassName('specifications')[0] as HTMLElement
           ).classList.remove('is-visible');
+          (document.getElementById('tbc') as HTMLElement).textContent = 'Home';
         }
         Array.from(
           document.getElementsByClassName('toggles-visibility')
         ).forEach((x: any) => {
           if (x.classList.contains('is-visible')) return;
-          if (x.offsetHeight - scrollY <= 20)x.classList.add("is-visible");
+          if (x.offsetHeight - scrollY <= 20) x.classList.add('is-visible');
         });
         Array.from(document.getElementsByClassName('toggles-visibility'))
           .filter(
@@ -47,9 +48,19 @@ export class AppComponent implements OnInit {
               !x.classList.contains('specifications')
           )
           .forEach((x: any) => {
-            if (x.offsetHeight - scrollY > 20)
-              x.classList.remove('is-visible');
+            if (x.offsetHeight - scrollY > 20) x.classList.remove('is-visible');
           });
+        Array.from(document.getElementsByClassName('is-section')).forEach(
+          (x: any, i: number) => {
+            if (
+              scrollY >= x.offsetTop - 224 &&
+              scrollY <= x.offsetTop - 224 + x.offsetHeight
+            ) {
+              (document.getElementById('tbc') as HTMLElement).textContent =
+                document.getElementsByClassName('separator')[i].textContent;
+            }
+          }
+        );
       });
   }
 }

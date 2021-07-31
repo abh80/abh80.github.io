@@ -46,7 +46,6 @@
   height: 200px;
   width: 100%;
   position: relative;
-  top: 30%;
 }
 .scroll-me.is-not-visible {
   opacity: 0;
@@ -54,11 +53,17 @@
 .specifications {
   z-index: 40;
 }
-.specifications i {
+.specifications a {
   font-size: 50px;
   margin: 7px;
+  transition: all 0.3s ease-in-out;
 }
-
+.specifications a:hover {
+  transform: translateY(-10px);
+}
+.specifications a {
+  display: inline-block;
+}
 .scrollable-content {
   padding-left: 100px;
   padding-right: 50px;
@@ -134,6 +139,8 @@
   animation: up-and-down 1.5s infinite alternate;
   margin: auto;
   display: block;
+  position: relative;
+  top: 30%;
 }
 .is-visible {
   opacity: 1;
